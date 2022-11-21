@@ -15,6 +15,7 @@
     "startbootstrap-creative": "^7.0.6",
     "web-vitals": "^2.1.4"
   },
+  "homepage": "https://bell-ho.github.io/github-pages",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
