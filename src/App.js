@@ -1,10 +1,9 @@
-import './App.css';
-import { useCallback, useState } from 'react';
-
+import Main from './components/Main';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
 function App() {
-  const [value, setValue] = useState(0);
-
-  return <div>리액트??</div>;
+  library.add(fab);
+  return <Main />;
 }
 
 export default App;
