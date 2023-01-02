@@ -15,7 +15,7 @@ const Navbar = () => {
           <li className={'navbar__menu__item'}>About</li>
           <li className={'navbar__menu__item'}>MY work</li>
           <li className={'navbar__menu__item'}>Skills</li>
-          <li className={'navbar__menu__item'}>Contact</li>
+          <li className={'navbar__menu__item'}>Contact Me</li>
         </ul>
       </Box>
     </Box>

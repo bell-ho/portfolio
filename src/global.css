@@ -38,6 +38,7 @@
 
 body {
     margin: 0;
+    font-family: 'Pretendard', serif;
 
     /*마우스를 텍스트에 올려도 기본 지정모양*/
     cursor: default;
@@ -51,6 +52,13 @@ a {
 ul {
     list-style: none;
     padding-left: 0;
+}
+
+button {
+    background: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
 }
 
 /* Typography */
@@ -108,7 +116,6 @@ p {
     margin: 0 4px;
     cursor: pointer;
     border-radius: var(--size-border-radius);
-
 }
 
 .navbar__menu__item.active {
@@ -119,6 +126,35 @@ p {
     background-color: var(--color-dark-pink);
 }
 
+/* home */
+
+.home {
+    background: url("../src/assets/imgs/home_background.png") center/cover no-repeat;
+    padding: 40px;
+    text-align: center;
+}
+
+.home__avatar {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 2px solid var(--color-light-white);
+}
+
+.home__title,
+.home__description {
+    color: var(--color-white);
+}
+
+.home__contact{
+    font-size: var(--font-regular);
+    font-weight: var(--weight-bold);
+    margin: 24px;
+    padding: 8px 12px;
+    border: 2px solid white;
+    border-radius: var(--size-border-radius);
+    color: var(--color-white);
+}
 
 @font-face {
     font-family: 'NotoSans';

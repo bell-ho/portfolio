@@ -4,13 +4,13 @@ import dog3 from '../assets/imgs/dog3.jpg';
 
 const Home = () => {
   return (
-    <Box>
-      <img src={dog3} alt={'dog3'} />
-      <Typography variant={'h1'}>
-        hello, <br /> I'm JJ
-      </Typography>
-      <Typography variant={'h2'}>GOOD</Typography>
-      <Button>Contact me</Button>
+    <Box className={'home'}>
+      <img src={dog3} alt={'dog3'} className={'home__avatar'} />
+      <h1 className={'home__title'}>
+        Hello, <br /> I'm JJ GOOOOOOD
+      </h1>
+      <h2 className={'home__description'}>GOOD</h2>
+      <button className={'home__contact'}>Contact me</button>
     </Box>
   );
 };
