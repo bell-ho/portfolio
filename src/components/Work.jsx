@@ -4,7 +4,7 @@ import dog3 from '../assets/imgs/dog3.jpg';
 
 const Work = () => {
   return (
-    <Box>
+    <Box className={'section work'}>
       <Typography variant={'h1'}>My work</Typography>
       <Typography variant={'h3'}>Projects</Typography>
       <Box className={'work__categories'}>

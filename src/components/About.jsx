@@ -1,41 +1,43 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import dog3 from '../assets/imgs/dog3.jpg';
+import { faUser, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 const About = () => {
   return (
-    <Box>
-      <Typography variant={'h1'}>About me</Typography>
-      <Typography variant={'caption'}>설명</Typography>
+    <Box className={'about section'}>
+      <h1>About me</h1>
+      <Typography variant={'caption'}>굿굿맨</Typography>
 
       <Box className={'about__majors'}>
         <Box className={'major'}>
           <Box className={'major__icon'}>
-            <FontAwesomeIcon icon="fa-brands fa-react" />
+            <FontAwesomeIcon icon={faUser} />
           </Box>
-          <Box className={'major__title'}>Front-end</Box>
-          <Box className={'major__description'}>HTML, CSS, JS, React, Vue</Box>
+          <Box>
+            <Box className={'major__label'}>이름</Box>
+            <Box className={'major__value'}>홍길동</Box>
+          </Box>
         </Box>
 
         <Box className={'major'}>
           <Box className={'major__icon'}>
-            <FontAwesomeIcon icon="fa-brands fa-react" />
+            <FontAwesomeIcon icon={faPhone} />
           </Box>
-          <Box className={'major__title'}> Back-end</Box>
-          <Box className={'major__description'}>Java</Box>
+          <Box>
+            <Box className={'major__label'}>연락처</Box>
+            <Box className={'major__value'}>010-0000-0000</Box>
+          </Box>
         </Box>
-      </Box>
 
-      <Box className={'about__jobs'}>
-        <Box className={'job'}>
-          <img src={dog3} alt={'dog'} className={'job__logo'} />
-          <Typography variant={'caption'} className={'job__name'}>
-            우하하하
-          </Typography>
-          <Typography variant={'caption'} className={'job__period'}>
-            1년
-          </Typography>
+        <Box className={'major'}>
+          <Box className={'major__icon'}>
+            <FontAwesomeIcon icon={faEnvelope} />
+          </Box>
+          <Box>
+            <Box className={'major__label'}>이메일</Box>
+            <Box className={'major__value'}>aaa@aaa.com</Box>
+          </Box>
         </Box>
       </Box>
     </Box>

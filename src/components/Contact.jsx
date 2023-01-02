@@ -3,7 +3,7 @@ import { Box, Typography } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 const Contact = () => {
   return (
-    <Box>
+    <Box className={'section contact'}>
       <Typography variant={'h1'} className={'contact__title'}>
         Let's talk
       </Typography>

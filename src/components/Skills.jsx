@@ -4,7 +4,7 @@ import { Box, Typography } from '@mui/material';
 const Skills = () => {
   const [progress, setProgress] = React.useState(70);
   return (
-    <Box>
+    <Box className={'section skills'}>
       <Typography variant={'h1'}>Skills</Typography>
       <Typography variant={'h2'}>Skills & Attributes</Typography>
       <Typography variant={'caption'}>설명</Typography>
