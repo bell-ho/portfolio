@@ -1,49 +1,38 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
+import frontend from '../assets/imgs/stacks/fe/frontend.png';
+import dog3 from '../assets/imgs/dog3.jpg';
 
 const Skills = () => {
-  const [progress, setProgress] = React.useState(70);
   return (
     <Box className={'section skills'}>
-      <Typography variant={'h1'}>Skills</Typography>
-      <Typography variant={'h2'}>Skills & Attributes</Typography>
-      <Typography variant={'caption'}>설명</Typography>
-      <Box className={'skillset'}>
-        <Box className={'skillset__left'}>
-          <Typography variant={'h3'}>Skills</Typography>
-          <Box className={'skill'}>
-            <Box className={'skill__description'}>
-              <span>HTML</span>
-              <span>99%</span>
+      <Box className={'section__container'}>
+        <h1>Skills</h1>
+        <Box className={'skills__content'}>
+          <Box className={'stack__container'}>
+            <Box className={'stacks__tech'}>
+              <Box className={'skills__title'}>FE</Box>
+              <img src={frontend} className={'skills_img'} />
             </Box>
-            <Box className={'skill__bar'}>
-              <Box className={'skill__value'}></Box>
+            <Box className={'stacks__tech'}>
+              <Box className={'skills__title'}>BE</Box>
+              <img src={dog3} className={'skills_img'}></img>
+              <img src={dog3} className={'skills_img'}></img>
+              <img src={dog3} className={'skills_img'}></img>
+              <img src={dog3} className={'skills_img'}></img>
             </Box>
-          </Box>
-        </Box>
-        <Box className={'skillset__right'}>
-          <Box className={'tools'}>
-            <Typography variant={'h3'} className={'skillset__title'}>
-              Tools
-            </Typography>
-            <ul className={'tools__list'}>
-              <li>
-                <span>VS</span>
-              </li>
-              <li>
-                <span>intellij</span>
-              </li>
-            </ul>
-          </Box>
-          <Box className={'etc'}>
-            <Typography variant={'h3'} className={'skillset__title'}>
-              Etc
-            </Typography>
-            <ul className={'etc__list'}>
-              <li>
-                <span>Git</span>
-              </li>
-            </ul>
+            <Box className={'stacks__tech'}>
+              <Box className={'skills__title'}>Version Control</Box>
+              <img src={dog3} className={'skills_img'}></img>
+            </Box>
+            <Box className={'stacks__tech'}>
+              <Box className={'skills__title'}>Communication</Box>
+              <img src={dog3} className={'skills_img'}></img>
+            </Box>
+            <Box className={'stacks__tech'}>
+              <Box className={'skills__title'}>Certificate</Box>
+              <img src={dog3} className={'skills_img'}></img>
+            </Box>
           </Box>
         </Box>
       </Box>
