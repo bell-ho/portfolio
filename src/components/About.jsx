@@ -6,8 +6,8 @@ import { faUser, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 const About = () => {
   return (
     <Box className={'about section section__container'}>
-      <h1>About me</h1>
-      <Typography variant={'caption'}>굿굿맨</Typography>
+      <h1>About Me</h1>
+      <Typography variant={'caption'}>저에요</Typography>
 
       <Box className={'about__majors'}>
         <Box className={'major'}>
@@ -16,7 +16,7 @@ const About = () => {
           </Box>
           <Box>
             <Box className={'major__label'}>이름</Box>
-            <Box className={'major__value'}>홍길동</Box>
+            <Box className={'major__value'}>몰라요</Box>
           </Box>
         </Box>
 

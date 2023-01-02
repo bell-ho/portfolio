@@ -18,8 +18,6 @@ const Skills = () => {
               <Box className={'skills__title'}>BE</Box>
               <img src={dog3} className={'skills_img'}></img>
               <img src={dog3} className={'skills_img'}></img>
-              <img src={dog3} className={'skills_img'}></img>
-              <img src={dog3} className={'skills_img'}></img>
             </Box>
             <Box className={'stacks__tech'}>
               <Box className={'skills__title'}>Version Control</Box>
