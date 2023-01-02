@@ -4,20 +4,21 @@ import { Box, Link } from '@mui/material';
 
 const Navbar = () => {
   return (
-    <>
-      <Box>
+    <Box className={'navbar'}>
+      <Box className={'navbar__logo'}>
         <StarIcon />
-        <Link href={'#'}>BELL-HO</Link>
+        <a href={'#'}>BELL-HO</a>
       </Box>
       <Box className={'navbar__menu'}>
         <ul className={'navbar__menu'}>
-          <li className={'navbar__menu__item'}>HOME</li>
+          <li className={'navbar__menu__item active'}>HOME</li>
+          <li className={'navbar__menu__item'}>About</li>
           <li className={'navbar__menu__item'}>MY work</li>
           <li className={'navbar__menu__item'}>Skills</li>
           <li className={'navbar__menu__item'}>Contact</li>
         </ul>
       </Box>
-    </>
+    </Box>
   );
 };
 
