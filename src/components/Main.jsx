@@ -1,10 +1,12 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect } from 'react';
 import Navbar from './Navbar';
 import About from './About';
 import Home from './Home';
 import Skills from './Skills';
 import Work from './Work';
 import Contact from './Contact';
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const scrollIntoView = (selector) => {
   const scrollTo = document.querySelector(selector);
@@ -30,6 +32,7 @@ const Main = () => {
       if (link == null) {
         return;
       }
+      // navbarMenu.classList.remove('open');
       scrollIntoView(link);
     });
 
@@ -39,6 +42,25 @@ const Main = () => {
     // 투명하게 만들기
     document.addEventListener('scroll', () => {
       home.style.opacity = 1 - window.scrollY / homeHeight;
+    });
+
+    const arrowUp = document.querySelector('.arrow-up');
+
+    document.addEventListener('scroll', () => {
+      if (window.scrollY > homeHeight / 2) {
+        arrowUp.classList.add('visible');
+      } else {
+        arrowUp.classList.remove('visible');
+      }
+    });
+
+    arrowUp.addEventListener('click', () => {
+      scrollIntoView('#home');
+    });
+
+    const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+    navbarToggleBtn.addEventListener('click', () => {
+      navbarMenu.classList.toggle('open');
     });
   }, []);
 
@@ -50,6 +72,10 @@ const Main = () => {
       <Skills />
       <Work />
       <Contact />
+
+      <button className={'arrow-up'}>
+        <FontAwesomeIcon icon={faArrowUp} />
+      </button>
     </>
   );
 };

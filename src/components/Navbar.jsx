@@ -11,25 +11,24 @@ const Navbar = () => {
         <StarIcon />
         <a href={'#'}>BELL-HO</a>
       </Box>
-      <Box className={'navbar__menu'}>
-        <ul className={'navbar__menu'}>
-          <li className={'navbar__menu__item active'} data-link={'#home'}>
-            HOME
-          </li>
-          <li className={'navbar__menu__item'} data-link={'#about'}>
-            About
-          </li>
-          <li className={'navbar__menu__item'} data-link={'#work'}>
-            MY work
-          </li>
-          <li className={'navbar__menu__item'} data-link={'#skills'}>
-            Skills
-          </li>
-          <li className={'navbar__menu__item'} data-link={'#contact'}>
-            Contact Me
-          </li>
-        </ul>
-      </Box>
+
+      <ul className={'navbar__menu'}>
+        <li className={'navbar__menu__item active'} data-link={'#home'}>
+          HOME
+        </li>
+        <li className={'navbar__menu__item'} data-link={'#about'}>
+          About
+        </li>
+        <li className={'navbar__menu__item'} data-link={'#work'}>
+          MY work
+        </li>
+        <li className={'navbar__menu__item'} data-link={'#skills'}>
+          Skills
+        </li>
+        <li className={'navbar__menu__item'} data-link={'#contact'}>
+          Contact Me
+        </li>
+      </ul>
 
       <button className={'navbar__toggle-btn'}>
         <FontAwesomeIcon icon={faBars} />
