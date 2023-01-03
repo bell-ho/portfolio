@@ -1,6 +1,8 @@
 import React from 'react';
 import StarIcon from '@mui/icons-material/Star';
 import { Box, Link } from '@mui/material';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
   return (
@@ -18,6 +20,10 @@ const Navbar = () => {
           <li className={'navbar__menu__item'}>Contact Me</li>
         </ul>
       </Box>
+
+      <button className={'navbar__toggle-btn'}>
+        <FontAwesomeIcon icon={faBars} />
+      </button>
     </Box>
   );
 };

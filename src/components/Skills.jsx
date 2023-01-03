@@ -12,24 +12,24 @@ const Skills = () => {
           <Box className={'stack__container'}>
             <Box className={'stacks__tech'}>
               <Box className={'skills__title'}>FE</Box>
-              <img src={frontend} className={'skills_img'} />
+              <img src={frontend} className={'skills_img'} alt={'#'} />
             </Box>
             <Box className={'stacks__tech'}>
               <Box className={'skills__title'}>BE</Box>
-              <img src={dog3} className={'skills_img'}></img>
-              <img src={dog3} className={'skills_img'}></img>
+              <img src={dog3} className={'skills_img'} alt={'#'}></img>
+              <img src={dog3} className={'skills_img'} alt={'#'}></img>
             </Box>
             <Box className={'stacks__tech'}>
               <Box className={'skills__title'}>Version Control</Box>
-              <img src={dog3} className={'skills_img'}></img>
+              <img src={dog3} className={'skills_img'} alt={'#'}></img>
             </Box>
             <Box className={'stacks__tech'}>
               <Box className={'skills__title'}>Communication</Box>
-              <img src={dog3} className={'skills_img'}></img>
+              <img src={dog3} className={'skills_img'} alt={'#'}></img>
             </Box>
             <Box className={'stacks__tech'}>
               <Box className={'skills__title'}>Certificate</Box>
-              <img src={dog3} className={'skills_img'}></img>
+              <img src={dog3} className={'skills_img'} alt={'#'}></img>
             </Box>
           </Box>
         </Box>
