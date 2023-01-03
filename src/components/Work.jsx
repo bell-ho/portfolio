@@ -4,7 +4,7 @@ import dog3 from '../assets/imgs/dog3.jpg';
 
 const Work = () => {
   return (
-    <Box className={'section work'}>
+    <Box className={'section work'} id={'work'}>
       <Box className={'section__container'}>
         <h1>My work</h1>
         <h3>Projects</h3>

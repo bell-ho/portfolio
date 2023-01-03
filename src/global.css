@@ -116,7 +116,7 @@ p {
     color: var(--color-white);
     padding: 16px;
     transition: all var(--animation-duration) ease-in-out;
-    z-index: 100;
+    z-index: 1;
 }
 
 #navbar.navbar--dark{
@@ -161,7 +161,8 @@ p {
 
 .home {
     background: url("../src/assets/imgs/home_background.png") center/cover no-repeat;
-    padding: 100px 40px 40px;
+    padding: 40px;
+    padding-top: 120px;
     text-align: center;
 }
 
@@ -211,7 +212,7 @@ p {
 .major__icon:hover {
     color: var(--color-pink);
     transform: rotate(-30deg) scale(1.1);
-    transition: all 300ms ease;
+    transition: all var(--animation-duration) ease
 }
 
 .major__label {
@@ -319,13 +320,14 @@ p {
     top: -20px;
     left: 4px;
     opacity: 0;
-    transition: all var(--animation-duration) ease;
+    transition: all var(--animation-duration) ease-in;
 }
 
 .work__projects {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    transition: all var(--animation-duration) ease-out;
 }
 
 .project {
@@ -361,7 +363,7 @@ p {
 
     opacity: 0;
     transform: translateY(10px);
-    transition: all var(--animation-duration) ease;
+    transition: all var(--animation-duration) ease-in;
 }
 
 .project:hover .project__description {
@@ -406,12 +408,13 @@ p {
 .contact__links{
     font-size: var(--font-large);
     margin: 24px 0;
+    transition: all var(--animation-duration) ease-in;
 }
 
 .contact__links svg:hover{
     transform: scale(1.5);
     color: var(--color-yellow);
-    transition: all var(--animation-duration) ease;
+    /*transition: all var(--animation-duration) ease-in;*/
 }
 
 @media screen and (max-width: 768px){
@@ -419,6 +422,7 @@ p {
         display: block;
     }
     .navbar{
+        position: fixed;
         flex-direction: column;
         align-items: flex-start;
     }

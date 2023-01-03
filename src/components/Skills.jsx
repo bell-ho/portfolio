@@ -5,7 +5,7 @@ import dog3 from '../assets/imgs/dog3.jpg';
 
 const Skills = () => {
   return (
-    <Box className={'section skills'}>
+    <Box className={'section skills'} id={'skills'}>
       <Box className={'section__container'}>
         <h1>Skills</h1>
         <Box className={'skills__content'}>

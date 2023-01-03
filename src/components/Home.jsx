@@ -4,7 +4,7 @@ import dog3 from '../assets/imgs/dog3.jpg';
 
 const Home = () => {
   return (
-    <Box className={'home'}>
+    <Box className={'home'} id={'home'}>
       <img src={dog3} alt={'dog3'} className={'home__avatar'} />
       <h1 className={'home__title'}>
         Hello, <br /> I'm JH

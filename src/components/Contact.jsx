@@ -4,7 +4,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 
 const Contact = () => {
   return (
-    <Box className={'section contact'}>
+    <Box className={'section contact'} id={'contact'}>
       <h1 className={'contact__title'}>Let's talk</h1>
       <h2 className={'contact__email'}>aaa@aaa.com</h2>
       <Box className={'contact__links'}>

@@ -5,7 +5,7 @@ import { faUser, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 const About = () => {
   return (
-    <Box className={'about section section__container'}>
+    <Box className={'about section section__container'} id={'about'}>
       <h1>About Me</h1>
       <Typography variant={'caption'}>저에요</Typography>
 
