@@ -6,6 +6,11 @@ import Skills from './Skills';
 import Work from './Work';
 import Contact from './Contact';
 
+const scrollIntoView = (selector) => {
+  const scrollTo = document.querySelector(selector);
+  scrollTo.scrollIntoView({ behavior: 'smooth' });
+};
+
 const Main = () => {
   useEffect(() => {
     window.addEventListener('scroll', () => {
@@ -25,8 +30,15 @@ const Main = () => {
       if (link == null) {
         return;
       }
-      const scrollTo = document.querySelector(link);
-      scrollTo.scrollIntoView({ behavior: 'smooth' });
+      scrollIntoView(link);
+    });
+
+    const home = document.querySelector('.home__container');
+    const homeHeight = home.getBoundingClientRect().height;
+
+    // 투명하게 만들기
+    document.addEventListener('scroll', () => {
+      home.style.opacity = 1 - window.scrollY / homeHeight;
     });
   }, []);
 
