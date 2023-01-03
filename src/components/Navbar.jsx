@@ -6,7 +6,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
   return (
-    <Box className={'navbar'}>
+    <Box className={'navbar'} id={'navbar'}>
       <Box className={'navbar__logo'}>
         <StarIcon />
         <a href={'#'}>BELL-HO</a>
