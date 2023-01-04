@@ -188,6 +188,9 @@ p {
     color: var(--color-white);
 }
 
+.home__contact:hover {
+    background-color: var(--color-orange);
+}
 /*about*/
 
 .about__majors {

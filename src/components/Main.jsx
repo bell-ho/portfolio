@@ -15,6 +15,7 @@ const scrollIntoView = (selector) => {
 
 const Main = () => {
   useEffect(() => {
+    const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
     window.addEventListener('scroll', () => {
       const navbar = document.querySelector('#navbar');
       const navbarHeight = navbar.getBoundingClientRect().height;
@@ -58,7 +59,6 @@ const Main = () => {
       scrollIntoView('#home');
     });
 
-    const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
     navbarToggleBtn.addEventListener('click', () => {
       navbarMenu.classList.toggle('open');
     });
