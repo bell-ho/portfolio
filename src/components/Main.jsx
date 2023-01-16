@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useLayoutEffect } from "react";
 import Navbar from './Navbar';
 import About from './About';
 import Home from './Home';
@@ -14,8 +14,10 @@ const scrollIntoView = (selector) => {
 };
 
 const Main = () => {
-  useEffect(() => {
+
+  useLayoutEffect(() => {
     const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+
     window.addEventListener('scroll', () => {
       const navbar = document.querySelector('#navbar');
       const navbarHeight = navbar.getBoundingClientRect().height;
@@ -33,7 +35,7 @@ const Main = () => {
       if (link == null) {
         return;
       }
-      // navbarMenu.classList.remove('open');
+      navbarMenu.classList.remove('open');
       scrollIntoView(link);
     });
 
@@ -60,7 +62,7 @@ const Main = () => {
     });
 
     navbarToggleBtn.addEventListener('click', () => {
-      navbarMenu.classList.toggle('open');
+      navbarMenu.classList.add("open");
     });
   }, []);
 
