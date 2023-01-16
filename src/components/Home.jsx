@@ -1,12 +1,12 @@
 import React from 'react';
 import { Box, Button, Typography } from '@mui/material';
-import dog3 from '../assets/imgs/dog3.jpg';
+import MainProfile from '../assets/imgs/main_profile.jpg';
 
 const Home = () => {
   return (
     <Box className={'home'} id={'home'}>
       <Box className={'home__container'}>
-        <img src={dog3} alt={'dog3'} className={'home__avatar'} />
+        <img src={MainProfile} alt={'main_profile'} className={'home__avatar'} />
         <h1 className={'home__title'}>
           Hello, <br /> I'm JH
         </h1>

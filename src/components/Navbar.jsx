@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <Box className={'navbar'} id={'navbar'}>
       <Box className={'navbar__logo'}>
-        <StarIcon />
+        <StarIcon style={{ marginRight: '10px' }} />
         <a href={'#'}>BELL-HO</a>
       </Box>
 
