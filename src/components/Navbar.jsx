@@ -7,32 +7,38 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 const Navbar = () => {
   return (
     <Box className={'navbar'} id={'navbar'}>
+      <input type="checkbox" id="toggle" />
+
+      <button className={'navbar__toggle-btn'}>
+        <label for={'toggle'}>
+          <FontAwesomeIcon icon={faBars} />
+        </label>
+      </button>
+
       <Box className={'navbar__logo'}>
         <StarIcon style={{ marginRight: '10px' }} />
         <a href={'#'}>BELL-HO</a>
       </Box>
 
-      <ul className={'navbar__menu'}>
-        <li className={'navbar__menu__item active'} data-link={'#home'}>
-          HOME
-        </li>
-        <li className={'navbar__menu__item'} data-link={'#about'}>
-          About
-        </li>
-        <li className={'navbar__menu__item'} data-link={'#work'}>
-          MY work
-        </li>
-        <li className={'navbar__menu__item'} data-link={'#skills'}>
-          Skills
-        </li>
-        <li className={'navbar__menu__item'} data-link={'#contact'}>
-          Contact Me
-        </li>
-      </ul>
-
-      <button className={'navbar__toggle-btn'}>
-        <FontAwesomeIcon icon={faBars} />
-      </button>
+      <aside>
+        <ul className={'navbar__menu'}>
+          <li className={'navbar__menu__item active'} data-link={'#home'}>
+            HOME
+          </li>
+          <li className={'navbar__menu__item'} data-link={'#about'}>
+            ABOUT
+          </li>
+          <li className={'navbar__menu__item'} data-link={'#work'}>
+            MY WORK
+          </li>
+          <li className={'navbar__menu__item'} data-link={'#skills'}>
+            SKILLS
+          </li>
+          <li className={'navbar__menu__item'} data-link={'#contact'}>
+            CONTACT ME
+          </li>
+        </ul>
+      </aside>
     </Box>
   );
 };
