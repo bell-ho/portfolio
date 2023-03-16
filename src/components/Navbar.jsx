@@ -28,11 +28,11 @@ const Navbar = () => {
           <li className={'navbar__menu__item'} data-link={'#about'}>
             ABOUT
           </li>
-          <li className={'navbar__menu__item'} data-link={'#work'}>
-            MY WORK
-          </li>
           <li className={'navbar__menu__item'} data-link={'#skills'}>
             SKILLS
+          </li>
+          <li className={'navbar__menu__item'} data-link={'#work'}>
+            MY WORK
           </li>
           <li className={'navbar__menu__item'} data-link={'#contact'}>
             CONTACT ME

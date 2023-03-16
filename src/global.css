@@ -94,7 +94,7 @@ p {
 }
 
 .section {
-    padding: 70px;
+    padding: 100px 70px 70px;
     text-align: center;
     margin: auto;
 }
@@ -139,6 +139,7 @@ p {
     padding: 8px 12px;
     margin: 0 4px;
     cursor: pointer;
+    color: var(--color-white);
     border-radius: var(--size-border-radius);
 }
 
@@ -160,7 +161,6 @@ p {
 }
 
 /* home */
-
 .home {
     background: url("../src/assets/imgs/home_background.png") center/cover no-repeat;
     padding: 7.5rem 2.5rem 2.5rem;
@@ -244,13 +244,13 @@ p {
     max-width: 71.25rem;
     padding: 2rem;
     margin: auto;
-    height: 88rem;
+    height: 78rem;
 }
 
 .stack__container {
     display: flex;
     flex-flow: column wrap;
-    align-content: space-around;
+    align-content: space-evenly;
     height: calc(100% - (7.5rem + 1px));
 }
 
@@ -261,6 +261,10 @@ p {
     border-radius: 1rem;
     background-color: #fff;
     box-shadow: 1rem 1rem 1rem 0 rgb(68 68 68 / 20%);
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 
     transform: translateY(10px);
     transition: all var(--animation-duration) ease;
@@ -281,7 +285,6 @@ p {
 
 .skills_img {
     display: block;
-    width: 100%;
 }
 
 /*work*/
@@ -499,7 +502,7 @@ p {
     }
 
     .section {
-        padding: 40px 16px 16px;
+        padding: 16px;
     }
 
     .about__majors {
@@ -514,7 +517,7 @@ p {
         width: 200px;
         display: flex;
         justify-content: flex-start;
-        margin-bottom: 38px;
+        margin-bottom: 30px;
     }
 
     .skills__content {
@@ -552,6 +555,9 @@ p {
         display: block;
     }
 
+    .section{
+        padding: 70px 16px 16px;
+    }
 }
 
 @font-face {
