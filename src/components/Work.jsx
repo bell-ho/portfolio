@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Button, Typography } from '@mui/material';
-import dog3 from '../assets/imgs/dog3.jpg';
+import jh from '../assets/imgs/main_profile.jpg';
 
 const Work = () => {
   return (
@@ -22,7 +22,7 @@ const Work = () => {
 
         <Box className={'work__projects'}>
           <a href={'#'} className={'project'} target={'_blank'}>
-            <img src={dog3} alt={''} align={'good'} className={'project__img'} />
+            <img src={jh} alt={''} align={'good'} className={'project__img'} />
             <Box className={'project__description'}>
               <h3>Good Project</h3>
               <span>HTML, CSS</span>
@@ -30,7 +30,7 @@ const Work = () => {
           </a>
 
           <a href={'#'} className={'project'} target={'_blank'}>
-            <img src={dog3} alt={''} align={'good'} className={'project__img'} />
+            <img src={jh} alt={''} align={'good'} className={'project__img'} />
             <Box className={'project__description'}>
               <h3>Good Project</h3>
               <span>HTML, CSS</span>
@@ -38,7 +38,7 @@ const Work = () => {
           </a>
 
           <a href={'#'} className={'project'} target={'_blank'}>
-            <img src={dog3} alt={''} align={'good'} className={'project__img'} />
+            <img src={jh} alt={''} align={'good'} className={'project__img'} />
             <Box className={'project__description'}>
               <h3>Good Project</h3>
               <span>HTML, CSS</span>
@@ -46,7 +46,7 @@ const Work = () => {
           </a>
 
           <a href={'#'} className={'project'} target={'_blank'}>
-            <img src={dog3} alt={''} align={'good'} className={'project__img'} />
+            <img src={jh} alt={''} align={'good'} className={'project__img'} />
             <Box className={'project__description'}>
               <h3>Good Project</h3>
               <span>HTML, CSS</span>
@@ -54,7 +54,7 @@ const Work = () => {
           </a>
 
           <a href={'#'} className={'project'} target={'_blank'}>
-            <img src={dog3} alt={''} align={'good'} className={'project__img'} />
+            <img src={jh} alt={''} align={'good'} className={'project__img'} />
             <Box className={'project__description'}>
               <h3>Good Project</h3>
               <span>HTML, CSS</span>

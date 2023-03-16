@@ -45,4 +45,5 @@ export const deployment = [
   `https://img.shields.io/badge/Amazon AWS-${getRandomColor()}?style=for-the-badge&logo=Amazon AWS&logoColor=white`,
   `https://img.shields.io/badge/Amazon S3-${getRandomColor()}?style=for-the-badge&logo=Amazon S3&logoColor=white`,
   `https://img.shields.io/badge/AWS Lambda-${getRandomColor()}?style=for-the-badge&logo=AWS Lambda&logoColor=white`,
+  `https://img.shields.io/badge/Amazon RDS-${getRandomColor()}?style=for-the-badge&logo=Amazon RDS&logoColor=white`,
 ];
