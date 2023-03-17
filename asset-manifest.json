@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/github-pages/static/css/main.b074e41a.css",
-    "main.js": "/github-pages/static/js/main.df65ea50.js",
+    "main.css": "/github-pages/static/css/main.bdfdfa14.css",
+    "main.js": "/github-pages/static/js/main.7b519d20.js",
     "static/media/NotoSansKR-Light.otf": "/github-pages/static/media/NotoSansKR-Light.636ff9b51e826a733c3d.otf",
     "static/media/Pretendard-Medium.woff2": "/github-pages/static/media/Pretendard-Medium.ea235f1edb8815831a25.woff2",
     "static/media/main_profile.jpg": "/github-pages/static/media/main_profile.1f28063a3b565d8c7aca.jpg",
     "static/media/home_background.png": "/github-pages/static/media/home_background.0348c7ff0984d70c2fec.png",
     "index.html": "/github-pages/index.html",
-    "main.b074e41a.css.map": "/github-pages/static/css/main.b074e41a.css.map",
-    "main.df65ea50.js.map": "/github-pages/static/js/main.df65ea50.js.map"
+    "main.bdfdfa14.css.map": "/github-pages/static/css/main.bdfdfa14.css.map",
+    "main.7b519d20.js.map": "/github-pages/static/js/main.7b519d20.js.map"
   },
   "entrypoints": [
-    "static/css/main.b074e41a.css",
-    "static/js/main.df65ea50.js"
+    "static/css/main.bdfdfa14.css",
+    "static/js/main.7b519d20.js"
   ]
 }
