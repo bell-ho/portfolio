@@ -31,6 +31,9 @@ const Projects = () => {
       <SwiperSlide>
         <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
       </SwiperSlide>
+      <SwiperSlide>
+        <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+      </SwiperSlide>
     </Swiper>
   );
 };
