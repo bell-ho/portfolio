@@ -5,18 +5,24 @@ const useScrollToSection = (selectedNavIndex) => {
 
   const scrollIntoView = (selector) => {
     const scrollTo = document.querySelector(selector);
-    scrollTo.scrollIntoView({ behavior: 'smooth' });
+    const navHeight = document.querySelector('.navbar').offsetHeight;
+
+    const targetPosition = scrollTo.offsetTop - navHeight;
+
+    window.scrollTo({
+      top: targetPosition,
+      behavior: 'smooth',
+    });
   };
 
   useEffect(() => {
     const navItems = sectionIds.map((id) => document.querySelector(`[data-link="${id}"]`));
     const selectNavItem = (selected) => {
       navItems.forEach((navItem) => navItem.classList.remove('active'));
-      // selected.classList.add('active');
     };
 
     selectNavItem(navItems[selectedNavIndex]);
-  }, [selectedNavIndex]);
+  }, [selectedNavIndex, sectionIds]);
 
   return scrollIntoView;
 };

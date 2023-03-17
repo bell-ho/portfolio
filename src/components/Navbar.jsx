@@ -32,7 +32,7 @@ const Navbar = () => {
             SKILLS
           </li>
           <li className={'navbar__menu__item'} data-link={'#work'}>
-            MY WORK
+            PROJECTS
           </li>
           <li className={'navbar__menu__item'} data-link={'#contact'}>
             CONTACT ME

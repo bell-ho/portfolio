@@ -32,7 +32,7 @@ const useScrollObserver = () => {
     return () => {
       sections.forEach((section) => observer.unobserve(section));
     };
-  }, []);
+  }, [sectionIds]);
 
   return selectedNavIndex;
 };
