@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Button, Typography } from '@mui/material';
-import Projects from '../components/projects';
+import Projects from './projects/Projects';
 
 const Work = () => {
   return (

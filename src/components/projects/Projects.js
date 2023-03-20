@@ -6,6 +6,7 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import { Box } from '@mui/material';
 import styled from '@emotion/styled';
+import ProjectForm from './ProjectForm';
 
 const Projects = () => {
   return (
@@ -24,15 +25,13 @@ const Projects = () => {
       pagination={true}
       modules={[EffectCoverflow, Pagination]}
       className="mySwiper"
+      autoHeight
     >
       <SwiperSlide>
-        <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+        <ProjectForm />
       </SwiperSlide>
       <SwiperSlide>
-        <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+        <ProjectForm />
       </SwiperSlide>
     </Swiper>
   );
