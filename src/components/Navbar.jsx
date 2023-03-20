@@ -10,7 +10,7 @@ const Navbar = () => {
       <input type="checkbox" id="toggle" />
 
       <button className={'navbar__toggle-btn'}>
-        <label for={'toggle'}>
+        <label htmlFor={'toggle'}>
           <FontAwesomeIcon icon={faBars} />
         </label>
       </button>
