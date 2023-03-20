@@ -1,7 +1,7 @@
 export const projects = [
   {
     name: 'Memo-Life',
-    productionPeriod: '2022.05 ~ 2022.11',
+    productionPeriod: '2022.05 ~ 2022.7',
     images: [
       'https://jh-mybucket.s3.ap-northeast-2.amazonaws.com/uploads/memo1.jpg',
       'https://jh-mybucket.s3.ap-northeast-2.amazonaws.com/uploads/memo2.jpg',
