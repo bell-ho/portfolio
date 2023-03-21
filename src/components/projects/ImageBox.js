@@ -1,6 +1,7 @@
 import React, { Children } from 'react';
 import { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+
 const ImageBox = ({ images }) => {
   return (
     <Swiper

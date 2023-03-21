@@ -1,5 +1,31 @@
 export const projects = [
   {
+    name: 'MY-BLOG',
+    productionPeriod: '2023.02 ~ 2022.3',
+    images: [
+      'https://jh-mybucket.s3.ap-northeast-2.amazonaws.com/uploads/myblog1.jpg',
+      'https://jh-mybucket.s3.ap-northeast-2.amazonaws.com/uploads/myblog2.jpg',
+      'https://jh-mybucket.s3.ap-northeast-2.amazonaws.com/uploads/myblog3.jpg',
+      'https://jh-mybucket.s3.ap-northeast-2.amazonaws.com/uploads/myblog4.jpg',
+      'https://jh-mybucket.s3.ap-northeast-2.amazonaws.com/uploads/myblog5.gif',
+    ],
+    mainContent: {
+      content:
+        '나의 일상을 공유하는 서비스 MY-BLOG 입니다.\n 기존의 MEMO-LIFE 프로젝트 기능을\n 업그레이드하여 제작하였습니다.',
+      mainFn: [
+        '소셜 로그인-로그아웃',
+        '게시글 업로드',
+        '게시글 숨기기',
+        '숨겨진 게시글 태그 검색',
+        '좋아요-싫어요',
+      ],
+      front: ['React.js', 'Next.js', 'Next-Auth', 'React-Query'],
+      back: ['SpringBoot', 'JPA', 'MYSQL'],
+      deploy: ['AWS EC2', 'AWS RDS', 'AWS S3', 'AWS ROUTE53'],
+      git: { href: 'https://github.com/bell-ho/my-blog', title: 'MY-BLOG' },
+    },
+  },
+  {
     name: 'Memo-Life',
     productionPeriod: '2022.05 ~ 2022.7',
     images: [
