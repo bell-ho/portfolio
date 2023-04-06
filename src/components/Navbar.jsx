@@ -34,8 +34,11 @@ const Navbar = () => {
           <li className={'navbar__menu__item'} data-link={'#work'}>
             PROJECTS
           </li>
+          <li className={'navbar__menu__item'} data-link={'#career'}>
+            CAREER
+          </li>
           <li className={'navbar__menu__item'} data-link={'#contact'}>
-            CONTACT ME
+            CONTACT
           </li>
         </ul>
       </aside>

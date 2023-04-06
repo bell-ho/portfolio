@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import useScrollObserver from '../hooks/useScrollObserver';
 import useScrollToSection from '../hooks/useScrollToSection';
 import useNavbarToggle from '../hooks/useNavbarToggle';
+import Career from './Career';
 
 const Main = () => {
   const selectedNavIndex = useScrollObserver();
@@ -23,6 +24,7 @@ const Main = () => {
       <About />
       <Skills />
       <Work />
+      <Career />
       <Contact />
 
       <button className={'arrow-up'} onClick={() => scrollIntoView('#home')}>
