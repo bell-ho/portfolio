@@ -13,14 +13,21 @@ const Career = () => {
   return (
     <Wrapper id={'career'}>
       <h1 style={{ alignSelf: 'center' }}>Career</h1>
-      <MDEditor.Markdown style={{ backgroundColor: '#f5f5f5' }} source={markdownContent} />
+      <MdWrapper>
+        <MDEditor.Markdown style={{ backgroundColor: '#f5f5f5' }} source={markdownContent} />
+      </MdWrapper>
     </Wrapper>
   );
 };
 
+const MdWrapper = styled(Box)`
+  max-width: 1200px;
+`;
+
 const Wrapper = styled(Box)`
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 2rem;
   background-color: #f5f5f5;
 `;
