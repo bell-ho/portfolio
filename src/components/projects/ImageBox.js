@@ -1,14 +1,15 @@
-import React, { Children } from 'react';
-import { Pagination } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import React, { Children } from "react";
+import { Pagination } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import styled from "@emotion/styled";
 
 const ImageBox = ({ images }) => {
   return (
     <Swiper
-      effect={'coverflow'}
+      effect={"coverflow"}
       grabCursor={true}
       centeredSlides={true}
-      slidesPerView={'auto'}
+      slidesPerView={"auto"}
       pagination={true}
       modules={[Pagination]}
       className="mySwiper"
@@ -19,7 +20,7 @@ const ImageBox = ({ images }) => {
           <SwiperSlide>
             <img src={v} alt={v} />
           </SwiperSlide>
-        )),
+        ))
       )}
     </Swiper>
   );
