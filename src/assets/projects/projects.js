@@ -3,7 +3,11 @@ export const projects = [
     name: 'MY-BLOG',
     productionPeriod: '2023.02 ~ 2022.3',
     images: [
-      'https://jh-mybucket.s3.ap-northeast-2.amazonaws.com/uploads/project/myblog/226513661-830146e7-7e65-433f-b6ce-e95767e8a043.gif',
+      'https://jh-mybucket.s3.ap-northeast-2.amazonaws.com/uploads/project/myblog/myblog1.jpg',
+      'https://jh-mybucket.s3.ap-northeast-2.amazonaws.com/uploads/project/myblog/myblog2.jpg',
+      'https://jh-mybucket.s3.ap-northeast-2.amazonaws.com/uploads/project/myblog/myblog3.jpg',
+      'https://jh-mybucket.s3.ap-northeast-2.amazonaws.com/uploads/project/myblog/myblog4.jpg',
+      'https://jh-mybucket.s3.ap-northeast-2.amazonaws.com/uploads/project/myblog/myblog5.gif',
     ],
     mainContent: {
       content:
