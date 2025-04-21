@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Button, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 import Projects from './projects/Projects';
 import styled from '@emotion/styled';
 
@@ -15,11 +15,12 @@ const Work = () => {
     </Box>
   );
 };
+
 const Wrapper = styled(Box)`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
 `;
 
 export default Work;

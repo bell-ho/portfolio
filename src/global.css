@@ -103,7 +103,7 @@ p {
 
 .section__container {
     margin: auto;
-    max-width: 1200px;
+    max-width: 900px;
 }
 
 /* navbar */
@@ -244,9 +244,9 @@ p {
 .skills__content {
     width: 100%;
     max-width: 71.25rem;
-    padding: 2rem;
+    /*padding: 0.5rem;*/
     margin: auto;
-    height: 78rem;
+    height: 75rem;
 }
 
 .stack__container {

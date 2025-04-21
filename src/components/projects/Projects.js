@@ -18,10 +18,10 @@ const Projects = () => {
           <h3>{v.productionPeriod}</h3>
         </Grid>
         <Grid container spacing={4}>
-          <Grid item xs={12} md={6}>
-            <Images images={v.images} />
-          </Grid>
-          <Grid item xs={12} md={6}>
+          {/*<Grid item xs={12} md={6}>*/}
+          {/*  <Images images={v.images} />*/}
+          {/*</Grid>*/}
+          <Grid item xs={12} md={12}>
             <Content content={v.mainContent} />
           </Grid>
         </Grid>
@@ -31,11 +31,11 @@ const Projects = () => {
 };
 
 const Wrapper = styled(Grid)`
-  background-color: rgb(255, 255, 255);
-  padding: 2rem;
-  border-radius: 20px;
-  gap: 20px;
-  margin-bottom: 30px;
+    background-color: rgb(255, 255, 255);
+    padding: 2rem;
+    border-radius: 20px;
+    gap: 20px;
+    margin-bottom: 30px;
 `;
 
 export default Projects;
