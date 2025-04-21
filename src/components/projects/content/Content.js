@@ -20,31 +20,31 @@ const Content = ({ content: { content, mainFn, front, back, deploy, git } }) => 
         <Box>
           <Label>주요 기능</Label>
           <Stack direction="row" sx={{ flexWrap: 'wrap', gap: 1, ml: 1 }}>
-            {Children.toArray(mainFn.map((v) => <ChipCustom label={v} variant="outlined" />))}
+            {Children.toArray(mainFn?.map((v) => <ChipCustom label={v} variant="outlined" />))}
           </Stack>
         </Box>
         <Box>
           <Label>Front-End</Label>
           <Stack direction="row" sx={{ flexWrap: 'wrap', gap: 1, ml: 1 }}>
-            {Children.toArray(front.map((v) => <ChipCustom label={v} variant="outlined" />))}
+            {Children.toArray(front?.map((v) => <ChipCustom label={v} variant="outlined" />))}
           </Stack>
         </Box>
         <Box>
           <Label>Back-End</Label>
           <Stack direction="row" sx={{ flexWrap: 'wrap', gap: 1, ml: 1 }}>
-            {Children.toArray(back.map((v) => <ChipCustom label={v} variant="outlined" />))}
+            {Children.toArray(back?.map((v) => <ChipCustom label={v} variant="outlined" />))}
           </Stack>
         </Box>
         <Box>
           <Label>Deployment</Label>
           <Stack direction="row" sx={{ flexWrap: 'wrap', gap: 1, ml: 1 }}>
-            {Children.toArray(deploy.map((v) => <ChipCustom label={v} variant="outlined" />))}
+            {Children.toArray(deploy?.map((v) => <ChipCustom label={v} variant="outlined" />))}
           </Stack>
         </Box>
         <Box>
           <Label>GitHub</Label>
-          <LinkCustom href={git.href} target="_blank" rel="noopener noreferrer" underline="none">
-            {git.title}
+          <LinkCustom href={git?.href} target="_blank" rel="noopener noreferrer" underline="none">
+            {git?.title}
           </LinkCustom>
         </Box>
       </SkillWrapper>
