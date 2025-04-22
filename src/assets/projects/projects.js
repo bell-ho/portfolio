@@ -21,7 +21,7 @@ export const projects = [
   },
   {
     name: 'MY-BLOG',
-    productionPeriod: '2023.02 ~ 2022.3',
+    productionPeriod: '2022.02 ~ 2022.3',
     images: [],
     mainContent: {
       content:
@@ -34,8 +34,8 @@ export const projects = [
         '숨겨진 게시글 태그 검색',
         '좋아요-싫어요',
       ],
-      front: ['React.js', 'Next.js', 'Next-Auth', 'React-Query'],
-      back: ['SpringBoot', 'JPA', 'MYSQL'],
+      front: ['React.js', 'Next.js', 'Next-Auth', 'React-Query', 'MUI'],
+      back: ['SpringBoot', 'JPA', 'QueryDsl', 'MYSQL'],
       deploy: ['AWS EC2', 'AWS RDS', 'AWS S3', 'AWS ROUTE53'],
       git: { href: 'https://github.com/bell-ho/my-blog', title: 'MY-BLOG' },
     },
