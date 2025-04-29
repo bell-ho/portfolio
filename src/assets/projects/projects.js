@@ -1,22 +1,21 @@
 export const projects = [
   {
-    name: 'AI 블로그 자동 포스팅',
-    productionPeriod: '2024.10 ~ 2024.12',
+    name: 'MY-PORTFOLIO',
+    productionPeriod: '2023.03 ~ 2023.4',
     images: [],
     mainContent: {
       content:
-        'AI를 활용한 블로그 자동 포스팅 프로그램 입니다.\n ' +
-        '키워드를 기반으로 100% 자동 포스팅할 수 있는 프로그램 입니다. (N사 블로그)\n' +
-        'ChatGPT를 이용했고 아무 키워드 입력시 블로그 컨텐츠가 생성됩니다.',
+        '개인 포트폴리오를 제작하고 공유하는 서비스 입니다.\n ' +
+        '포트폴리오 제작이 막연한 사용자들을 위해 만들었습니다.',
       mainFn: [
-        '썸네일 자동 제작',
-        '이미지 자동 삽입 (필사베이 무료 API 이용)',
-        '사진 자동 삽입',
-        '스티커 삽입 가능',
-        'SEO 최적화',
+        '소셜 로그인-로그아웃',
+        '포트폴리오 제작',
+        '포트폴리오 공유',
       ],
-      back: ['Python'],
-      git: { href: 'https://github.com/bell-ho/my-blog', title: 'AI 블로그 포스팅' },
+      front: ['React.js', 'Next.js', 'Next-Auth', 'React-Query', 'MUI'],
+      back: ['SpringBoot', 'JPA', 'QueryDsl', 'MYSQL'],
+      deploy: ['AWS EC2', 'AWS RDS', 'AWS S3', 'AWS ROUTE53'],
+      git: { href: 'https://github.com/bell-ho/my-portfolio', title: 'MY-PORTFOLIO' },
     },
   },
   {
