@@ -42,7 +42,7 @@ const Content = ({ content: { content, mainFn, front, back, deploy, git } }) => 
           </Stack>
         </Box>
         <Box>
-          <Label>GitHub</Label>
+          <Label>자세한 프로젝트 설명</Label>
           <LinkCustom href={git?.href} target="_blank" rel="noopener noreferrer" underline="none">
             {git?.title}
           </LinkCustom>
