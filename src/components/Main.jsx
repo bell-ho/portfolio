@@ -23,8 +23,8 @@ const Main = () => {
       <Home />
       <About />
       <Skills />
-      <Work />
       <Career />
+      <Work />
       <Contact />
 
       <button className={'arrow-up'} onClick={() => scrollIntoView('#home')}>
