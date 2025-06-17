@@ -198,16 +198,13 @@ p {
 
 /*about*/
 
-
 .about__majors {
     display: flex;
-    justify-content: center;
-    gap: 3rem;
+    justify-content: space-around;
     margin: 80px 0;
 }
 
 .major {
-    width: 200px;
     display: flex;
     justify-content: space-between;
 }
