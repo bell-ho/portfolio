@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useLayoutEffect } from 'react';
+import React, { Fragment } from 'react';
 import Navbar from './Navbar';
 import About from './About';
 import Home from './Home';
