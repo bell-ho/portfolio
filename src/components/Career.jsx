@@ -1,35 +1,36 @@
 import React, { useEffect, useState } from 'react';
-import { Box } from '@mui/material';
-import styled from '@emotion/styled';
 import careerMd from '../assets/md/career.md';
 import MDEditor from '@uiw/react-md-editor';
+
 const Career = () => {
   const [markdownContent, setMarkdownContent] = useState('');
+
   useEffect(() => {
     fetch(careerMd)
       .then((response) => response.text())
       .then((text) => setMarkdownContent(text));
   }, []);
+
   return (
-    <Wrapper id={'career'}>
-      <h1 style={{ alignSelf: 'center' }}>Career</h1>
-      <MdWrapper>
-        <MDEditor.Markdown style={{ backgroundColor: '#f5f5f5' }} source={markdownContent} />
-      </MdWrapper>
-    </Wrapper>
+    <section className="section career" id="career">
+      <div className="section__container">
+        <h1 className="section__title">Career</h1>
+        <p className="section__description">
+          저의 경력과 경험입니다
+        </p>
+
+        <div className="career__content" data-color-mode="dark">
+          <MDEditor.Markdown
+            source={markdownContent}
+            style={{
+              backgroundColor: 'transparent',
+              color: 'var(--color-text-primary)',
+            }}
+          />
+        </div>
+      </div>
+    </section>
   );
 };
-
-const MdWrapper = styled(Box)`
-  max-width: 1200px;
-`;
-
-const Wrapper = styled(Box)`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem;
-  background-color: #f5f5f5;
-`;
 
 export default Career;

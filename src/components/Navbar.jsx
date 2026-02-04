@@ -1,48 +1,60 @@
-import React from 'react';
-import StarIcon from '@mui/icons-material/Star';
-import { Box, Link } from '@mui/material';
+import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
-  return (
-    <Box className={'navbar'} id={'navbar'}>
-      <input type="checkbox" id="toggle" />
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
-      <button className={'navbar__toggle-btn'}>
-        <label htmlFor={'toggle'}>
-          <FontAwesomeIcon icon={faBars} />
-        </label>
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const handleNavClick = (e, targetId) => {
+    e.preventDefault();
+    setIsMenuOpen(false);
+    document.querySelector(targetId)?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const menuItems = [
+    { id: '#home', label: 'Home' },
+    { id: '#about', label: 'About' },
+    { id: '#skills', label: 'Skills' },
+    { id: '#work', label: 'Projects' },
+    { id: '#career', label: 'Career' },
+    { id: '#contact', label: 'Contact' },
+  ];
+
+  return (
+    <nav className={`navbar ${isScrolled ? 'navbar--dark' : ''}`} id="navbar">
+      <div className="navbar__logo">JH</div>
+
+      <button
+        className="navbar__toggle-btn"
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+        aria-label="Toggle menu"
+      >
+        <FontAwesomeIcon icon={isMenuOpen ? faXmark : faBars} />
       </button>
 
-      <Box className={'navbar__logo'}>
-        <StarIcon style={{ marginRight: '10px' }} />
-        <a href={'#'}>BELL-HO</a>
-      </Box>
-
-      <aside>
-        <ul className={'navbar__menu'}>
-          <li className={'navbar__menu__item active'} data-link={'#home'}>
-            HOME
+      <ul className={`navbar__menu ${isMenuOpen ? 'open' : ''}`}>
+        {menuItems.map((item) => (
+          <li
+            key={item.id}
+            className="navbar__menu__item"
+            data-link={item.id}
+            onClick={(e) => handleNavClick(e, item.id)}
+          >
+            {item.label}
           </li>
-          <li className={'navbar__menu__item'} data-link={'#about'}>
-            ABOUT
-          </li>
-          <li className={'navbar__menu__item'} data-link={'#skills'}>
-            SKILLS
-          </li>
-          <li className={'navbar__menu__item'} data-link={'#work'}>
-            PROJECTS
-          </li>
-          <li className={'navbar__menu__item'} data-link={'#career'}>
-            CAREER
-          </li>
-          <li className={'navbar__menu__item'} data-link={'#contact'}>
-            CONTACT
-          </li>
-        </ul>
-      </aside>
-    </Box>
+        ))}
+      </ul>
+    </nav>
   );
 };
 

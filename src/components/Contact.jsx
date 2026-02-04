@@ -1,32 +1,62 @@
 import React from 'react';
-import { Box } from '@mui/material';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import styled from '@emotion/styled';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import velog from '../assets/imgs/velog.jpg';
+
 const Contact = () => {
+  const socialLinks = [
+    {
+      name: 'GitHub',
+      url: 'https://github.com/bell-ho',
+      icon: <FontAwesomeIcon icon={faGithub} />,
+    },
+    {
+      name: 'Velog',
+      url: 'https://velog.io/@bell-ho',
+      image: velog,
+    },
+    {
+      name: 'Email',
+      url: 'mailto:jj0101065@gmail.com',
+      icon: <FontAwesomeIcon icon={faEnvelope} />,
+    },
+  ];
+
   return (
-    <Box className={'section contact'} id={'contact'}>
-      <Box className={'contact__links'}>
-        <Wrapper>
-          <a href={'https://github.com/bell-ho'} target={'_blank'}>
-            <GitHubIcon style={{ fontSize: 50 }} />
-          </a>
-          <a href="https://velog.io/@bell-ho" target="_blank" rel="noreferrer">
-            <img style={{ width: 46, borderRadius: 30, marginTop: 5 }} src={velog} alt={velog} />
-          </a>
-        </Wrapper>
-        <p className={'contact__rights'}>
-          2023. Lee Jong Ho <br /> All rights reserved
+    <footer className="section contact" id="contact">
+      <div className="section__container">
+        <h1 className="section__title">Contact</h1>
+        <p className="section__description">
+          함께 일하고 싶으시다면 연락주세요
         </p>
-      </Box>
-    </Box>
+
+        <div className="contact__social">
+          {socialLinks.map((link, index) => (
+            <a
+              key={index}
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact__social-link"
+              aria-label={link.name}
+            >
+              {link.image ? (
+                <img src={link.image} alt={link.name} />
+              ) : (
+                link.icon
+              )}
+              <span>{link.name}</span>
+            </a>
+          ))}
+        </div>
+
+        <div className="contact__footer">
+          <p>&copy; {new Date().getFullYear()} Lee Jong Ho. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
   );
 };
-const Wrapper = styled(Box)`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-`;
+
 export default Contact;

@@ -1,88 +1,62 @@
-import React, { Children, Fragment } from 'react';
-import { Box, Typography } from '@mui/material';
-import styled from '@emotion/styled';
-import Chip from '@mui/material/Chip';
-import Stack from '@mui/material/Stack';
-import Link from '@mui/material/Link';
+import React, { Fragment } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const Content = ({ content: { content, mainFn, front, back, deploy, git } }) => {
+  const techSections = [
+    { label: '주요 기능', items: mainFn, color: '#ec4899' },
+    { label: 'Front-End', items: front, color: '#6366f1' },
+    { label: 'Back-End', items: back, color: '#a855f7' },
+    { label: 'Deployment', items: deploy, color: '#22c55e' },
+  ];
+
   return (
-    <Wrapper>
-      <h3>
+    <div className="project__content">
+      <p className="project__description">
         {content.split('\n').map((line, index) => (
           <Fragment key={index}>
             {line}
             {index !== content.split('\n').length - 1 && <br />}
           </Fragment>
         ))}
-      </h3>
-      <SkillWrapper>
-        <Box>
-          <Label>주요 기능</Label>
-          <Stack direction="row" sx={{ flexWrap: 'wrap', gap: 1, ml: 1 }}>
-            {Children.toArray(mainFn?.map((v) => <ChipCustom label={v} variant="outlined" />))}
-          </Stack>
-        </Box>
-        <Box>
-          <Label>Front-End</Label>
-          <Stack direction="row" sx={{ flexWrap: 'wrap', gap: 1, ml: 1 }}>
-            {Children.toArray(front?.map((v) => <ChipCustom label={v} variant="outlined" />))}
-          </Stack>
-        </Box>
-        <Box>
-          <Label>Back-End</Label>
-          <Stack direction="row" sx={{ flexWrap: 'wrap', gap: 1, ml: 1 }}>
-            {Children.toArray(back?.map((v) => <ChipCustom label={v} variant="outlined" />))}
-          </Stack>
-        </Box>
-        <Box>
-          <Label>Deployment</Label>
-          <Stack direction="row" sx={{ flexWrap: 'wrap', gap: 1, ml: 1 }}>
-            {Children.toArray(deploy?.map((v) => <ChipCustom label={v} variant="outlined" />))}
-          </Stack>
-        </Box>
-        <Box>
-          <Label>자세한 프로젝트 설명</Label>
-          <LinkCustom href={git?.href} target="_blank" rel="noopener noreferrer" underline="none">
-            {git?.title}
-          </LinkCustom>
-        </Box>
-      </SkillWrapper>
-    </Wrapper>
+      </p>
+
+      <div className="project__tech-sections">
+        {techSections.map((section, sectionIndex) => (
+          section.items && section.items.length > 0 && (
+            <div key={sectionIndex} className="project__tech-section">
+              <h4 className="project__tech-label" style={{ borderColor: section.color }}>
+                {section.label}
+              </h4>
+              <div className="project__tech-tags">
+                {section.items.map((item, itemIndex) => (
+                  <span
+                    key={itemIndex}
+                    className="project__tech-tag"
+                    style={{ borderColor: section.color, color: section.color }}
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )
+        ))}
+      </div>
+
+      {git && (
+        <a
+          href={git.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="project__github-link"
+        >
+          <FontAwesomeIcon icon={faGithub} />
+          <span>GitHub에서 보기</span>
+        </a>
+      )}
+    </div>
   );
 };
 
-const Wrapper = styled(Box)`
-  font-size: 24px;
-  gap: 20px;
-  display: flex;
-  flex-direction: column;
-`;
-
-const SkillWrapper = styled(Box)`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 20px;
-`;
-
-const LinkCustom = styled(Link)`
-  font-size: 20px;
-  font-family: 'Pretendard', serif;
-  margin-left: 10px;
-`;
-
-const Label = styled(Box)`
-  display: table;
-  width: auto;
-  padding-left: 0.5rem;
-  margin-bottom: 0.5rem;
-  border-left: 5px solid #222;
-  font-weight: 900;
-  font-size: 1rem;
-`;
-
-const ChipCustom = styled(Chip)`
-  font-family: 'Pretendard', serif;
-`;
 export default Content;

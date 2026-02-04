@@ -1,5 +1,4 @@
-import React, { Children } from 'react';
-import { Box } from '@mui/material';
+import React from 'react';
 import {
   back,
   certificate,
@@ -10,40 +9,39 @@ import {
 } from '../assets/imgs/stacks/stacks';
 
 const Skills = () => {
+  const skillCategories = [
+    { title: 'Front-End', icons: front },
+    { title: 'Back-End', icons: back },
+    { title: 'Version Control', icons: versionControl },
+    { title: 'Deployment', icons: deployment },
+    { title: 'Communication', icons: communication },
+    { title: 'Certificate', icons: certificate },
+  ];
+
   return (
-    <Box className={'section skills'} id={'skills'}>
-      <Box className={'section__container'}>
-        <h1>Skills</h1>
-        <Box className={'skills__content'}>
-          <Box className={'stack__container'}>
-            <Box className={'stacks__tech'}>
-              <Box className={'skills__title'}>Front-End</Box>
-              {Children.toArray(front.map((v) => <img src={v} />))}
-            </Box>
-            <Box className={'stacks__tech'}>
-              <Box className={'skills__title'}>Back-End</Box>
-              {Children.toArray(back.map((v) => <img src={v} />))}
-            </Box>
-            <Box className={'stacks__tech'}>
-              <Box className={'skills__title'}>Version Control</Box>
-              {Children.toArray(versionControl.map((v) => <img src={v} />))}
-            </Box>
-            <Box className={'stacks__tech'}>
-              <Box className={'skills__title'}>Deployment</Box>
-              {Children.toArray(deployment.map((v) => <img src={v} />))}
-            </Box>
-            <Box className={'stacks__tech'}>
-              <Box className={'skills__title'}>Communication</Box>
-              {Children.toArray(communication.map((v) => <img src={v} />))}
-            </Box>
-            <Box className={'stacks__tech'}>
-              <Box className={'skills__title'}>Certificate</Box>
-              {Children.toArray(certificate.map((v) => <img src={v} />))}
-            </Box>
-          </Box>
-        </Box>
-      </Box>
-    </Box>
+    <section className="section skills" id="skills">
+      <div className="section__container">
+        <h1 className="section__title">Skills</h1>
+        <p className="section__description">
+          개발에 사용하는 기술 스택입니다
+        </p>
+
+        <div className="skills__grid">
+          {skillCategories.map((category, categoryIndex) => (
+            <div key={categoryIndex} className="skills__category">
+              <h3 className="skills__category-title">{category.title}</h3>
+              <div className="skills__icons">
+                {category.icons.map((icon, iconIndex) => (
+                  <div key={iconIndex} className="skills__icon-wrapper">
+                    <img src={icon} alt={`${category.title} skill`} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 };
 

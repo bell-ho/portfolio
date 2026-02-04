@@ -4,9 +4,13 @@ const useNavbarToggle = (scrollIntoView) => {
   useEffect(() => {
     const navbar = document.querySelector('#navbar');
     const navbarMenu = document.querySelector('.navbar__menu');
-    const toggle = document.querySelector('#toggle');
-    const home = document.querySelector('.home__container');
+    const home = document.querySelector('.home');
     const arrowUp = document.querySelector('.arrow-up');
+
+    if (!navbar || !navbarMenu || !home || !arrowUp) {
+      return;
+    }
+
     const homeHeight = home.getBoundingClientRect().height;
 
     const onNavbarMenuClick = (event) => {
@@ -16,7 +20,6 @@ const useNavbarToggle = (scrollIntoView) => {
         return;
       }
       navbarMenu.classList.remove('open');
-      toggle.checked = false;
       scrollIntoView(link);
     };
 
@@ -27,8 +30,6 @@ const useNavbarToggle = (scrollIntoView) => {
       } else {
         navbar.classList.remove('navbar--dark');
       }
-
-      home.style.opacity = 1 - window.scrollY / homeHeight;
 
       if (window.scrollY > homeHeight / 2) {
         arrowUp.classList.add('visible');

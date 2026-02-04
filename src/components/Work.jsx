@@ -1,26 +1,21 @@
 import React from 'react';
-import { Box } from '@mui/material';
 import Projects from './projects/Projects';
-import styled from '@emotion/styled';
 
 const Work = () => {
   return (
-    <Box className={'section work'} id={'work'}>
-      <Box className={'section__container'}>
-        <h1>Projects</h1>
-        <Wrapper>
+    <section className="section work" id="work">
+      <div className="section__container">
+        <h1 className="section__title">Projects</h1>
+        <p className="section__description">
+          제가 작업한 프로젝트들입니다
+        </p>
+
+        <div className="work__content">
           <Projects />
-        </Wrapper>
-      </Box>
-    </Box>
+        </div>
+      </div>
+    </section>
   );
 };
-
-const Wrapper = styled(Box)`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
-`;
 
 export default Work;
