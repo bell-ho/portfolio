@@ -1,5 +1,31 @@
 export const projects = [
   {
+    name: 'LAS-VEGAS',
+    productionPeriod: '2025.01',
+    images: [],
+    mainContent: {
+      content:
+        '실시간 멀티플레이어 주사위 보드게임 LAS-VEGAS 입니다.\n' +
+        '2012년 발매된 보드게임을 웹으로 구현하였습니다.\n' +
+        '플레이어들은 주사위를 굴려 카지노에 배치하고, 가장 많은 배당금을 획득하는 것이 목표입니다.',
+      mainFn: [
+        '실시간 멀티플레이어 (Socket.io)',
+        '방 생성/참가 시스템',
+        '실시간 채팅',
+        'AI 플레이어 (1~4명)',
+        '30초 턴 타이머',
+        '3D 주사위 (물리엔진)',
+        '반응형 UI (모바일/태블릿/데스크톱)',
+        '다크/라이트 모드',
+      ],
+      front: ['React 18', 'Zustand', 'Emotion', 'Framer Motion', 'Three.js', 'Cannon-es'],
+      back: ['Node.js', 'Express', 'Socket.io'],
+      deploy: ['PM2', 'Cloudflare Tunnel'],
+      git: { href: 'https://github.com/bell-ho/lasvegas-game', title: 'LAS-VEGAS' },
+      demo: { href: 'https://vegas.bellho.org', title: 'DEMO' },
+    },
+  },
+  {
     name: 'MY-BLOG',
     productionPeriod: '2022.02 ~ 2022.3',
     images: [],

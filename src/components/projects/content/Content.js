@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
-const Content = ({ content: { content, mainFn, front, back, deploy, git } }) => {
+const Content = ({ content: { content, mainFn, front, back, deploy, git, demo } }) => {
   const techSections = [
     { label: '주요 기능', items: mainFn, color: '#ec4899' },
     { label: 'Front-End', items: front, color: '#6366f1' },
@@ -44,17 +44,29 @@ const Content = ({ content: { content, mainFn, front, back, deploy, git } }) => 
         ))}
       </div>
 
-      {git && (
-        <a
-          href={git.href}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="project__github-link"
-        >
-          <FontAwesomeIcon icon={faGithub} />
-          <span>GitHub에서 보기</span>
-        </a>
-      )}
+      <div className="project__links">
+        {demo && (
+          <a
+            href={demo.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="project__demo-link"
+          >
+            <span>DEMO 보기</span>
+          </a>
+        )}
+        {git && (
+          <a
+            href={git.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="project__github-link"
+          >
+            <FontAwesomeIcon icon={faGithub} />
+            <span>GitHub에서 보기</span>
+          </a>
+        )}
+      </div>
     </div>
   );
 };
