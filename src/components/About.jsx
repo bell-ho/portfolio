@@ -1,15 +1,12 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faPhone, faUser, faCode, faGraduationCap, faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faPhone, faUser } from '@fortawesome/free-solid-svg-icons';
 
 const About = () => {
   const infoItems = [
     { icon: faUser, label: '이름', value: '이종호' },
     { icon: faPhone, label: '연락처', value: '010-8560-1074' },
     { icon: faEnvelope, label: '이메일', value: 'jj0101065@gmail.com' },
-    { icon: faLocationDot, label: '위치', value: '서울, 대한민국' },
-    { icon: faGraduationCap, label: '학력', value: '컴퓨터공학 전공' },
-    { icon: faCode, label: '관심분야', value: 'Web Development' },
   ];
 
   return (
