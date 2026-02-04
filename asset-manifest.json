@@ -1,18 +1,17 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.25503f3f.css",
-    "main.js": "/portfolio/static/js/main.35016c9f.js",
-    "static/media/NotoSansKR-Light.otf": "/portfolio/static/media/NotoSansKR-Light.636ff9b51e826a733c3d.otf",
+    "main.css": "/portfolio/static/css/main.c1f4d3f3.css",
+    "main.js": "/portfolio/static/js/main.82527a58.js",
     "static/media/Pretendard-Medium.woff2": "/portfolio/static/media/Pretendard-Medium.ea235f1edb8815831a25.woff2",
+    "static/media/Pretendard-Light.woff2": "/portfolio/static/media/Pretendard-Light.27c9a07cbc308ce88d1a.woff2",
     "static/media/main_profile.jpg": "/portfolio/static/media/main_profile.1f28063a3b565d8c7aca.jpg",
-    "static/media/home_background.png": "/portfolio/static/media/home_background.0348c7ff0984d70c2fec.png",
-    "static/media/career.md": "/portfolio/static/media/career.0b5576b4789703d94ba8.md",
+    "static/media/career.md": "/portfolio/static/media/career.d5ffe1f6edf4be0d1ec5.md",
     "index.html": "/portfolio/index.html",
-    "main.25503f3f.css.map": "/portfolio/static/css/main.25503f3f.css.map",
-    "main.35016c9f.js.map": "/portfolio/static/js/main.35016c9f.js.map"
+    "main.c1f4d3f3.css.map": "/portfolio/static/css/main.c1f4d3f3.css.map",
+    "main.82527a58.js.map": "/portfolio/static/js/main.82527a58.js.map"
   },
   "entrypoints": [
-    "static/css/main.25503f3f.css",
-    "static/js/main.35016c9f.js"
+    "static/css/main.c1f4d3f3.css",
+    "static/js/main.82527a58.js"
   ]
 }
